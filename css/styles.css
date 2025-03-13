@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 90px; /* El valor debe ser igual a la altura de la barra de navegación */
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+}
+
+nav .logo img {
+    width: 60px;
+    height: 60px;
+}
+
+nav .logo {
+    margin-right: 20px; /* Espacio entre el logo y el menú */
+}
+
+#menu {
+    display: flex;
+    list-style-type: none;
+}
+
+#menu li {
+    margin: 0 20px;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#menu li a.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    /*background-color: #4CAF50;  Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+#menu li a.button-style:hover {
+    background-color: #45a049; /* Fondo cuando pasas el ratón */
+}
+
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+section {
+    margin-bottom: 20px;
+    padding-top: 20px; /* Asegura que las secciones no se solapen con la barra de navegación */
+    position: relative;
+}
+
+p{
+    text-align: justify;
+}
+
+.content {
+    padding: 20px;
+}
+
+.elemento {
+    background-color: rgba(255, 228, 178, 0.342);
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px
+}
+
+ol {
+    padding-left: 20px; /* Agrega espacio al lado izquierdo para los números */
+    list-style-position: inside; /* Asegura que los números estén dentro del contorno de la lista */
+    margin: 20px 0; /* Ajusta el margen según el espacio que quieras entre la lista y otros elementos */
+}
+
+ol li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    text-align: justify;
+}
+
+ol li::marker {
+    font-weight: bold; /* Pone los números en negrita */
+}
+
+
+/* Añadir un margen superior a las secciones
+section {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Añadir espacio adicional en el inicio de cada sección para que no se tape con la barra de navegación 
+section::before {
+    content: "";
+    display: block;
+    height: 70px; 
+    width: 100%;
+    position: absolute;
+    top: -70px; 
+    left: 0;
+} 
+*/
+/* Añadir un margen superior a las secciones */
+
+/* Añadir espacio adicional solo cuando se hace scroll hacia los anclajes */
+h3 {
+    text-align: center; /* Centra el título */
+    margin-bottom: 10px; /* Espacio entre el título y la línea */
+}
+ul {
+    padding-left: 20px; /* Agrega espacio al lado izquierdo para los números */
+    list-style-position: inside; /* Asegura que los números estén dentro del contorno de la lista */
+    margin: 20px 0; /* Ajusta el margen según el espacio que quieras entre la lista y otros elementos */
+}
+
+ol li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    text-align: justify;
+}
+/* Estilo de la línea horizontal */
+.linea-verde {
+    border: 0;
+    height: 5px; /* Grosor de la línea */
+    background-color: green; /* Color verde */
+    width: 100%; /* Ancho completo */
+    margin: 0 auto; /* Centra la línea */
+}
+
+.image-container {
+    display: flex; /* Flexbox para alinear las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten al tamaño de la pantalla */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    gap: 20px; /* Espacio entre las imágenes */
+    margin-top: 20px;
+}
+
+  /* Estilo de cada imagen */
+.image-item {
+    width: 250px; /* Ancho fijo para cada imagen */
+    text-align: center; /* Centra el texto debajo de la imagen */
+    overflow: hidden; /* Asegura que cualquier parte recortada de la imagen no se muestre */
+}
+
+.image-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    height: 350px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Recorta la imagen para que cubra el área del contenedor */
+    border-radius: 8px; /* Bordes redondeados para un estilo más suave */
+}
+
+  /* Estilo del texto debajo de la imagen */
+.image-text {
+    font-size: 14px;
+    color: #3096b8; /* Azul claro */
+    margin-top: -6px;
+}
+
+/* -------------------------------- */
+/* -------financial-info----------- */
+/* -------------------------------- */
+
+.dl-docs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-auto-rows: 60px;
+    gap: 4px;
+    padding: 4px;
+}
+
+.dl-docs-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 7px;
+    transition: transform 0.2 ease-in-out;
+    border: solid black;
+    filter: opacity(0.8);
+    text-decoration: none;
+}
+
+.dl-docs-items:hover {
+    filter:opacity(1);
+    transform: scale(1.02);
+    border: solid #F37E21;
+    color: #F37E21;
+}
+
+.dl-docs-items-d{
+    display: flex;
+    align-items: center;
+}
+
+.dl-docs-items-d img{
+    height: 40px;
+    margin-right: 7px;
+    margin-left: 7px;
+}
+
+/* -------------------------------- */
+/* -------------------------------- */
+
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .contact a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    h2, h3{
+        font-size: 16px;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #333;
+        width: 200px;
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    #menu li {
+        margin: 5px 0;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    #menu.show {
+        display: flex;
+    }
+
+    .image-container {
+        justify-content: space-around; /* Ajusta las imágenes en pantallas más pequeñas */
+    }
+    
+    .image-item {
+        width: 100%; /* Hace que las imágenes ocupen todo el ancho en pantallas pequeñas */
+        max-width: 300px; /* Limita el tamaño máximo para las imágenes */
+    }
+}
